@@ -5,15 +5,16 @@
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
-  <input id="night_day" type="button" value="night" onclick="
-    if(document.querySelector('#night_day').value === 'night'){
-      document.querySelector('body').style.backgroundColor = 'black';
-      document.querySelector('body').style.color = 'white';
-      document.querySelector('#night_day').value = 'day';
+  <input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
     }else{
-      document.querySelector('body').style.backgroundColor = 'white';
-      document.querySelector('body').style.color = 'black';
-      document.querySelector('#night_day').value = 'night';
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
     }
   ">
   <ol>
@@ -25,4 +26,5 @@
 
 JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[14] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
   </p>
+  
 </body>
